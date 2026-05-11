@@ -18,12 +18,8 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(System.DefaultWorkingDirectory)'
-    Contents: |
-      **/pom.xml
-      src/**
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
-
+    Contents: '**/*.war'
+    TargetFolder: '$(build.artifactstagingdirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
