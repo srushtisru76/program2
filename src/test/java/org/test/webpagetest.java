@@ -1,11 +1,9 @@
 package org.test;
 
-import org.junit.Test;
-import static org.junit.Assert.assertTrue;
+import junit.framework.TestCase;
 
-public class webpagetest {
+public class webpagetest extends TestCase {
 
-    @Test
     public void testSample() {
         assertTrue(true);
     }
